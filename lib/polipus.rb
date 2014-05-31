@@ -382,7 +382,6 @@ module Polipus
 
     # whether a page exists or not
     def page_exists?(page)
-      return false if page.user_data && page.user_data.p_seeded
       @storage.exists?(page) && !page_expired?(page)
     end
 
